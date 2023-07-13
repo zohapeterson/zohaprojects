@@ -5,11 +5,16 @@
   --secondary_fontsize: 17px;
   --header_padding: 15px;
   --borders: 15px solid black;
-  --height_margins: 10%;
-  --all_padding: 6%;
+  --top_margins: 150px;
+  --bottom_margins: 100px;
+  --upper_padding: 6%;
+  --lower_padding: 4%;
   --line_height: 500px;
   --border_radius: 25px;
   --footer_padding: 35px;
+  --choose_width: 275px;
+  --choose_padding: 30px;
+  --body_margins: 20px;
 }
 
  * {
@@ -36,24 +41,28 @@
   font-weight: 800;
 }
 
-.zohapeterson {
+.zohapeterson, .contact_header, .experience_header, .projects_header, .about_header {
 	font-size: var(--title_fontsize);
 	block-size: fit-content;
 	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: var(--height_margins);
+	margin-top: var(--top_margins);
 	border: var(--borders);
-	padding: var(--all_padding);
+	padding: var(--upper_padding);
   border-radius: var(--border_radius);
 }
 
-.about {
+.main_body {
+  margin: var(--body_margins);
+}
+
+.about, .this_info {
 	margin-left: auto;
 	margin-right: auto;
 	block-size: fit-content;
 	width: fit-content;
-	padding: var(--all_padding);
+	padding: var(--lower_padding);
 	border: var(--borders);
   font-size: var(--secondary_fontsize);
 }
@@ -69,30 +78,47 @@
 .choose {
   margin-left: auto;
 	margin-right: auto;
-	block-size: fit-content;
+  block-size: fit-content;
 	width: fit-content;
-	border: var(--borders);
+	border: var(--borders); 
 	font-weight: bold;
+  
 }
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 li {
   display: inline-block;
+  background-color: black;
 }
 
-#about, #experience, #projects, #contact {
+.list_other1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+
+.list_other2 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+a {
+  display: inline-block;
   text-decoration: none;
-  border: none;
   font-size: var(--secondary_fontsize);
-  width: 275px;
-  height: 75px;
+  width: var(--choose_width);
+  padding-top: var(--choose_padding);
+  padding-bottom: var(--choose_padding);
 }
 
-#about:hover, #experience:hover, #projects:hover, #contact:hover {
+#about:hover, #experience:hover, #projects:hover, #contact:hover, #zp:hover {
   color: #F0EAD6;
   background-color: black;
   transition: 0.125s;
@@ -102,19 +128,15 @@ li {
   font-size: var(--secondary_fontsize);
 }
 
-#spot_1 {
-  transition: 0.125s;
-}
-
 .thanks {
   margin-left: auto;
 	margin-right: auto;
 	block-size: fit-content;
-	width: fit-content;
-	padding: var(--all_padding);
+  width: fit-content;
+  padding: var(--lower_padding);
 	border: var(--borders);
   border-radius: var(--border_radius);
-  margin-bottom: var(--height_margins);
+  margin-bottom: var(--bottom_margins);
   font-size: var(--secondary_fontsize);
 }
 
@@ -129,156 +151,70 @@ li {
   font-size: var(--secondary_fontsize);
 }
 
-@media only screen and (max-width: 1130px){
+@media only screen and (max-width: 1190px){
   :root {
-    --title_topmargin: 11%;
-  }
-  .zohapeterson {
-    margin-top: var(--title_topmargin);
-  }
-  li {
-    display: block;
+    --choose_width: 250px;
   }
 }
 
-@media only screen and (max-width: 930px){
+@media only screen and (max-width: 1080px){
   :root {
-    --title_fontsize: 90px;
+    --choose_width: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  :root {
+    --choose_width: 150px;
+    --title_fontsize: 70px;
     --secondary_fontsize: 15px;
-    --all_padding: 5%;
-    --header_padding: 15px;
-    --height_margins: 14%;
-    --line_height: 450px;
-    --footer-padding: 25px;
-  }
-
-  #stick_header, .about, #about, #experience, #projects, #contact, .thanks, .footer {
-    font-size:  var(--secondary_fontsize);
-  }
-
-  .about, .thanks, .zohapeterson {
-      padding: var(--all_padding);
-  }
-
-  #stick_header {
-    padding-top: var(--header_padding);
-    padding-bottom: var(--header_padding);
-  }
-
-  .zohapeterson {
-  	font-size: var(--title_fontsize);
-  	margin-top: var(--height_margins);
-  }
-
-  .center_line {
-  	height: var(--line_height);
-  }
-
-  .thanks {
-    margin-bottom: var(--height_margins);
-  }
-
-  .footer {
-    padding-bottom: var(--footer-padding);
-    padding-top: var(--footer-padding);
   }
 }
 
-@media only screen and (max-width: 728px){
+@media only screen and (max-width: 695px){
   :root {
     --title_fontsize: 60px;
-    --secondary_fontsize: 14px;
-    --line_height: 400px;
-    --height_margins: 18%;
+    --choose_width: 250px;
   }
-
-  .zohapeterson {
-  	font-size: var(--title_fontsize);
-  	margin-top: var(--height_margins);
+  a, li {
+    display: block;
+    width: var(--choose_width);
   }
-
-  .center_line {
-  	height: var(--line_height);
+  .list_other1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
-
-  .thanks {
-    margin-bottom: var(--height_margins);
+  .list_other2 {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
 }
 
-@media only screen and (max-width: 497px){
+@media only screen and (max-width: 555px){
   :root {
     --title_fontsize: 40px;
-    --secondary_fontsize: 13px;
-    --all_padding: 3%;
-    --height_margins: 24%;
-    --line_height: 350px;
-  }
-
-  #stick_header, .about, #about, #experience, #projects, #contact, .thanks, .footer {
-    font-size:  var(--secondary_fontsize);
-  }
-
-  .about, .thanks, .zohapeterson {
-      padding: var(--all_padding);
-  }
-
-  .zohapeterson {
-  	font-size: var(--title_fontsize);
-  	margin-top: var(--height_margins);
-  }
-
-  .center_line {
-  	height: var(--line_height);
-  }
-
-  .thanks {
-    margin-bottom: var(--height_margins);
+    --secondary_fontsize: 14px;
+    --choose_width: 200px;
   }
 }
-@media only screen and (max-width: 378px){
+@media only screen and (max-width: 393px){
   :root {
-    --height_margins: 30%;
-    --line_height: 300px;
-  }
-
-  .zohapeterson {
-  	margin-top: var(--height_margins);
-  }
-
-  .center_line {
-  	height: var(--line_height);
-  }
-
-  #about, #experience, #projects, #contact {
-    width: 200px;
-    height: 60px;
-  }
-
-  .thanks {
-    margin-bottom: var(--height_margins);
+    --choose_width: 140px;
   }
 }
-@media only screen and (max-width: 230px){
+
+@media only screen and (max-width: 290px){
   :root {
-    --height_margins: 50%;
-    --line_height: 300px;
+    --body_margins: 0;
   }
 
-  .zohapeterson {
-  	margin-top: var(--height_margins);
-  }
-
-  .center_line {
-  	height: var(--line_height);
-  }
-
-  #about, #experience, #projects, #contact {
-    width: 150px;
-    height: 60px;
-  }
-  
-  .thanks {
-    margin-bottom: var(--height_margins);
+}
+@media only screen and (max-width: 232px){
+  .center_line, .about, .choose, .thanks, .footer, .stick_header, .this_info {
+    display: none;
   }
 }
