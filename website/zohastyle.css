@@ -1,10 +1,10 @@
 :root {
   --background_color: #F0EAD6;
-  --text_color: black;
+  --text_color: #000000;
   --title_fontsize: 100px;
   --secondary_fontsize: 17px;
   --header_padding: 15px;
-  --borders: 15px solid black;
+  --borders: 15px solid var(--text_color);
   --top_margins: 150px;
   --bottom_margins: 100px;
   --upper_padding: 6%;
@@ -15,6 +15,9 @@
   --choose_width: 275px;
   --choose_padding: 30px;
   --body_margins: 20px;
+  --zp_left_padding: 25px;
+  --zp_right_padding: 55px;
+  --center_line_width: 7.5px;
 }
 
  * {
@@ -72,7 +75,7 @@
 	width:0px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 7.5px solid black;
+	border: var(--center_line_width) solid var(--text_color);
 }
 
 .choose {
@@ -91,22 +94,22 @@ ul {
 
 li {
   display: inline-block;
-  background-color: black;
+  background-color: var(--text_color);
 }
-
-.list_other1 {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
-}
-
 
 .list_other2 {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+#zp {
+  background-color: var(--text_color);
+  color: var(--background_color);
+  width: 0;
+  padding-left: var(--zp_left_padding);
+  padding-right: var(--zp_right_padding);
 }
 
 a {
@@ -118,14 +121,10 @@ a {
   padding-bottom: var(--choose_padding);
 }
 
-#about:hover, #experience:hover, #projects:hover, #contact:hover, #zp:hover {
-  color: #F0EAD6;
-  background-color: black;
+#about:hover, #experience:hover, #projects:hover, #contact:hover {
+  color: var(--background_color);
+  background-color: var(--text_color);
   transition: 0.125s;
-}
-
-.button_info {
-  font-size: var(--secondary_fontsize);
 }
 
 .thanks {
@@ -145,8 +144,8 @@ a {
   width: 100%;
   padding-bottom: var(--footer_padding);
   padding-top: var(--footer_padding);
-  color: #F0EAD6;
-  background-color: black;
+  color: var(--background_color);
+  background-color: var(--text_color);
   font-weight: lighter;
   font-size: var(--secondary_fontsize);
 }
@@ -175,17 +174,17 @@ a {
   :root {
     --title_fontsize: 60px;
     --choose_width: 250px;
+    --zp_left_padding: 0;
+    --zp_right_padding: 0;
   }
   a, li {
     display: block;
     width: var(--choose_width);
   }
-  .list_other1 {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+  #zp {
+    width: var(--choose_width);
   }
+
   .list_other2 {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
