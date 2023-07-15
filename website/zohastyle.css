@@ -1,10 +1,12 @@
 :root {
-  --background_color: #F0EAD6;
-  --text_color: #000000;
+  --background_color: #101010;
+  --text_color: #a7a7a7;
+  --border_color: #1b1b1b;
+  --color_pop: #D22B2B;
   --title_fontsize: 100px;
   --secondary_fontsize: 17px;
   --header_padding: 15px;
-  --borders: 15px solid var(--text_color);
+  --borders: 10.5px solid var(--border_color);
   --top_margins: 150px;
   --bottom_margins: 100px;
   --upper_padding: 6%;
@@ -15,9 +17,11 @@
   --choose_width: 275px;
   --choose_padding: 30px;
   --body_margins: 20px;
-  --zp_left_padding: 25px;
+  --zp_left_padding: 23px;
   --zp_right_padding: 55px;
-  --center_line_width: 7.5px;
+  --center_line_width: 5.25px;
+  --secondary_underline: 5px;
+  --primary_underline: 10.5px;
 }
 
  * {
@@ -26,7 +30,6 @@
 	padding: 0;
 	margin: 0;
   color: var(--text_color);
-  font-weight: bold;
   text-align: center;
 }
 
@@ -42,6 +45,9 @@
   transition: 0.2s;
   border-bottom: var(--borders);
   font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color:var(--color_pop);
+  text-decoration-thickness: var(--secondary_underline);
 }
 
 .zohapeterson, .contact_header, .experience_header, .projects_header, .about_header {
@@ -54,6 +60,9 @@
 	border: var(--borders);
 	padding: var(--upper_padding);
   border-radius: var(--border_radius);
+  text-decoration: underline;
+  text-decoration-color: var(--color_pop);
+  text-decoration-thickness: var(--primary_underline);
 }
 
 .main_body {
@@ -75,7 +84,7 @@
 	width:0px;
 	margin-left: auto;
 	margin-right: auto;
-	border: var(--center_line_width) solid var(--text_color);
+	border: var(--center_line_width) solid var(--border_color);
 }
 
 .choose {
@@ -83,9 +92,7 @@
 	margin-right: auto;
   block-size: fit-content;
 	width: fit-content;
-	border: var(--borders); 
-	font-weight: bold;
-  
+	border: var(--borders);   
 }
 
 ul {
@@ -94,7 +101,7 @@ ul {
 
 li {
   display: inline-block;
-  background-color: var(--text_color);
+  background-color: var(--border_color);
 }
 
 .list_other2 {
@@ -105,8 +112,8 @@ li {
 }
 
 #zp {
-  background-color: var(--text_color);
-  color: var(--background_color);
+  background-color: var(--border_color);
+  color: var(--text_color);
   width: 0;
   padding-left: var(--zp_left_padding);
   padding-right: var(--zp_right_padding);
@@ -122,8 +129,8 @@ a {
 }
 
 #about:hover, #experience:hover, #projects:hover, #contact:hover {
-  color: var(--background_color);
-  background-color: var(--text_color);
+  color: var(--text_color);
+  background-color: var(--border_color);
   transition: 0.125s;
 }
 
@@ -144,10 +151,13 @@ a {
   width: 100%;
   padding-bottom: var(--footer_padding);
   padding-top: var(--footer_padding);
-  color: var(--background_color);
-  background-color: var(--text_color);
+  color: var(--text_color);
+  background-color: var(--border_color);
   font-weight: lighter;
   font-size: var(--secondary_fontsize);
+  text-decoration: underline;
+  text-decoration-color:var(--color_pop);
+  text-decoration-thickness: var(--secondary_underline);
 }
 
 @media only screen and (max-width: 1190px){
