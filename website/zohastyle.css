@@ -2,7 +2,7 @@
   --background_color: #101010;
   --text_color: #a7a7a7;
   --border_color: #1b1b1b;
-  --color_pop: #D22B2B;
+  --color_pop: #330099;
   --title_fontsize: 100px;
   --secondary_fontsize: 17px;
   --header_padding: 15px;
@@ -31,6 +31,10 @@
 	margin: 0;
   color: var(--text_color);
   text-align: center;
+}
+
+::selection {
+  background: var(--color_pop);
 }
 
 #stick_header {
@@ -69,7 +73,7 @@
   margin: var(--body_margins);
 }
 
-.about, .this_info {
+.welcome, .this_info {
 	margin-left: auto;
 	margin-right: auto;
 	block-size: fit-content;
@@ -77,6 +81,25 @@
 	padding: var(--lower_padding);
 	border: var(--borders);
   font-size: var(--secondary_fontsize);
+}
+
+.text_1 {
+  font-size: var(--secondary_fontsize);
+  font-weight: lighter;
+  text-align: left;
+}
+
+.text_2 {
+  font-size: var(--secondary_fontsize);
+  font-weight: normal;
+  text-align: left;
+  font-style: italic;
+}
+
+.text_3 {
+  font-size: var(--secondary_fontsize);
+  font-weight: bolder;
+  text-align: left;
 }
 
 .center_line {
@@ -129,7 +152,6 @@ a {
 }
 
 #about:hover, #experience:hover, #projects:hover, #contact:hover {
-  color: var(--text_color);
   background-color: var(--border_color);
   transition: 0.125s;
 }
@@ -155,9 +177,6 @@ a {
   background-color: var(--border_color);
   font-weight: lighter;
   font-size: var(--secondary_fontsize);
-  text-decoration: underline;
-  text-decoration-color:var(--color_pop);
-  text-decoration-thickness: var(--secondary_underline);
 }
 
 @media only screen and (max-width: 1190px){
