@@ -2,7 +2,7 @@
   --background_color: #101010;
   --text_color: #a7a7a7;
   --border_color: #1b1b1b;
-  --color_pop: #330099;
+  --color_pop: #FF2400;
   --title_fontsize: 100px;
   --secondary_fontsize: 17px;
   --header_padding: 15px;
@@ -22,6 +22,11 @@
   --center_line_width: 5.25px;
   --secondary_underline: 5px;
   --primary_underline: 10.5px;
+  --stick_weight: 800;
+  --image_width: 225px;
+  --choose_radius: 10px;
+  --picture_text_gap: 20px;
+  --para_gap: 20px;
 }
 
  * {
@@ -48,10 +53,11 @@
   top: -100px;
   transition: 0.2s;
   border-bottom: var(--borders);
-  font-weight: 800;
+  font-weight: var(--stick_weight);
   text-decoration: underline;
   text-decoration-color:var(--color_pop);
   text-decoration-thickness: var(--secondary_underline);
+  z-index: 1;
 }
 
 .zohapeterson, .contact_header, .experience_header, .projects_header, .about_header {
@@ -73,7 +79,7 @@
   margin: var(--body_margins);
 }
 
-.welcome, .this_info {
+.welcome, .contact_wrapper, .experience_wrapper, .about_block_wrapper, .project_wrapper, .see_experience, .see_projects {
 	margin-left: auto;
 	margin-right: auto;
 	block-size: fit-content;
@@ -83,23 +89,41 @@
   font-size: var(--secondary_fontsize);
 }
 
-.text_1 {
+.textron_experience, .psp_experience, .asme_experience, .wm_experience, .data_science_experience, .scc_experience, .about_content_wrapper {
+  display: grid;
+  align-items: center;
+  column-gap: var(--picture_text_gap);
+  grid-template-columns: min-content 1fr;
+  
+}
+
+.textron_projects, .psp_projects, .asme_projects, .wm_projects, .data_science_projects, .scc_projects, .textron_experience, .psp_experience, .asme_experience, .wm_experience, .data_science_experience {
+  margin-bottom: var(--para_gap);
+}
+
+.text_1, .text_2, .text_3, .text_4, .text_5 {
   font-size: var(--secondary_fontsize);
-  font-weight: lighter;
   text-align: left;
 }
 
+.text_1 {
+  font-weight: 900;  
+}
 .text_2 {
-  font-size: var(--secondary_fontsize);
-  font-weight: normal;
-  text-align: left;
+  font-weight: 800;
   font-style: italic;
 }
 
 .text_3 {
-  font-size: var(--secondary_fontsize);
-  font-weight: bolder;
-  text-align: left;
+  font-weight: 500;
+}
+
+.text_4 {
+  font-weight: lighter;
+}
+
+.text_5 {
+  font-weight: lighter;
 }
 
 .center_line {
@@ -127,9 +151,16 @@ li {
   background-color: var(--border_color);
 }
 
-.list_other2 {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+img {
+  filter: grayscale(100%);
+  width: var(--image_width);
+  height: auto;
+  border: var(--borders);
+}
+
+.round_edges {
+  border-top-right-radius: var(--choose_radius);
+  border-bottom-right-radius: var(--choose_radius);
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -197,6 +228,25 @@ a {
     --title_fontsize: 70px;
     --secondary_fontsize: 15px;
   }
+
+  .textron_experience, .psp_experience, .asme_experience, .wm_experience, .data_science_experience, .scc_experience, .about_content_wrapper {
+    display: block;
+    align-items: unset;
+    column-gap: unset;
+    grid-template-columns: unset;
+  }
+
+  .text_1, .text_2, .text_3 {
+    text-align: center;
+  }
+
+  .text_1, .text_5 {
+    margin-top: 5px;
+  }
+
+  .text_4, .text_5 {
+    text-align: justify;
+  }
 }
 
 @media only screen and (max-width: 695px){
@@ -205,6 +255,7 @@ a {
     --choose_width: 250px;
     --zp_left_padding: 0;
     --zp_right_padding: 0;
+    --image_width: 160px;
   }
   a, li {
     display: block;
@@ -215,11 +266,12 @@ a {
   }
 
   .list_other2 {
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: var(--choose_radius);
+    border-bottom-left-radius: var(--choose_radius);
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
+
 }
 
 @media only screen and (max-width: 555px){
@@ -238,11 +290,12 @@ a {
 @media only screen and (max-width: 290px){
   :root {
     --body_margins: 0;
+    --image_width: 100px;
   }
 
 }
-@media only screen and (max-width: 232px){
-  .center_line, .about, .choose, .thanks, .footer, .stick_header, .this_info {
+@media only screen and (max-width: 268px){
+  .center_line, .about, .choose, .thanks, .footer, .stick_header, .welcome, .contact_wrapper, .experience_wrapper, .about_block_wrapper, .project_wrapper, .see_experience, .see_projects {
     display: none;
   }
 }
