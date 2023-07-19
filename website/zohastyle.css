@@ -60,7 +60,7 @@
   z-index: 1;
 }
 
-.zohapeterson, .contact_header, .experience_header, .projects_header, .about_header {
+.header {
 	font-size: var(--title_fontsize);
 	block-size: fit-content;
 	width: fit-content;
@@ -107,7 +107,8 @@
 }
 
 .text_1 {
-  font-weight: 900;  
+  font-weight: 900;
+ 
 }
 .text_2 {
   font-weight: 800;
@@ -115,11 +116,12 @@
 }
 
 .text_3 {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .text_4 {
   font-weight: lighter;
+  text-align: justify;
 }
 
 .text_5 {
@@ -226,6 +228,8 @@ a {
   :root {
     --choose_width: 150px;
     --title_fontsize: 70px;
+    --primary_underline: 9px;
+    --secondary_underline: 4px;
     --secondary_fontsize: 15px;
   }
 
@@ -265,7 +269,7 @@ a {
     width: var(--choose_width);
   }
 
-  .list_other2 {
+  .round_edges {
     border-bottom-right-radius: var(--choose_radius);
     border-bottom-left-radius: var(--choose_radius);
     border-top-left-radius: 0px;
@@ -278,24 +282,17 @@ a {
   :root {
     --title_fontsize: 40px;
     --secondary_fontsize: 14px;
-    --choose_width: 200px;
-  }
-}
-@media only screen and (max-width: 393px){
-  :root {
-    --choose_width: 140px;
+    --choose_width: 270px;
+    --primary_underline: 8px;
   }
 }
 
-@media only screen and (max-width: 290px){
+@media only screen and (max-width: 310px){
   :root {
     --body_margins: 0;
     --image_width: 100px;
   }
-
-}
-@media only screen and (max-width: 268px){
-  .center_line, .about, .choose, .thanks, .footer, .stick_header, .welcome, .contact_wrapper, .experience_wrapper, .about_block_wrapper, .project_wrapper, .see_experience, .see_projects {
-    display: none;
+  body {
+    width: 310px;
   }
 }
