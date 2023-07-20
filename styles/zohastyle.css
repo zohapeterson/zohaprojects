@@ -20,8 +20,6 @@
   --zp_left_padding: 27px;
   --zp_right_padding: 55px;
   --center_line_width: 2px;
-  --secondary_underline: 5px;
-  --primary_underline: 10.5px;
   --stick_weight: 800;
   --image_width: 160px;
   --choose_radius: 16px;
@@ -225,9 +223,8 @@ a {
   :root {
     --choose_width: 150px;
     --title_fontsize: 70px;
-    --primary_underline: 9px;
-    --secondary_underline: 4px;
     --secondary_fontsize: 15px;
+    --second_title_fontsize: 33px;
   }
 
   .about_content_wrapper {
@@ -280,8 +277,8 @@ a {
   :root {
     --title_fontsize: 40px;
     --secondary_fontsize: 14px;
+    --second_title_fontsize: 25px;
     --choose_width: 270px;
-    --primary_underline: 8px;
   }
 }
 
