@@ -1,15 +1,17 @@
 :root {
-  --background_color: #F0EAD6;
-  --text_color: #b34e24;
+  --background_color: white;
+  --text_color: black;
+  --selection_color: #fd3a2d;
   --title_fontsize: 100px;
   --secondary_fontsize: 17px;
+  --second_title_fontsize: 40px;
   --header_padding: 20px;
   --borders: 4px solid var(--text_color);
   --top_margins: 150px;
   --bottom_margins: 100px;
   --upper_padding: 6%;
   --lower_padding: 4%;
-  --line_height: 400px;
+  --line_height: 350px;
   --border_radius: 25px;
   --footer_padding: 30px;
   --choose_width: 190px;
@@ -25,6 +27,10 @@
   --choose_radius: 16px;
   --picture_text_gap: 20px;
   --para_gap: 20px;
+}
+
+::selection {
+  color: var(--selection_color);
 }
 
  * {
@@ -78,7 +84,7 @@
   font-size: var(--secondary_fontsize);
 }
 
-.textron_experience, .psp_experience, .asme_experience, .wm_experience, .data_science_experience, .scc_experience, .about_content_wrapper {
+.about_content_wrapper {
   display: grid;
   align-items: center;
   column-gap: var(--picture_text_gap);
@@ -97,7 +103,7 @@
 
 .text_1 {
   font-weight: 800;
-
+  font-size: var(--second_title_fontsize);
 }
 .text_2 {
   font-weight: 800;
@@ -145,6 +151,7 @@ img {
   width: var(--image_width);
   height: auto;
   border: var(--borders);
+  filter: grayscale(100%);
 }
 
 .round_edges {
@@ -223,7 +230,7 @@ a {
     --secondary_fontsize: 15px;
   }
 
-  .textron_experience, .psp_experience, .asme_experience, .wm_experience, .data_science_experience, .scc_experience, .about_content_wrapper {
+  .about_content_wrapper {
     display: block;
     align-items: unset;
     column-gap: unset;
