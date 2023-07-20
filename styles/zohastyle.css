@@ -21,7 +21,7 @@
   --secondary_underline: 5px;
   --primary_underline: 10.5px;
   --stick_weight: 800;
-  --image_width: 225px;
+  --image_width: 160px;
   --choose_radius: 16px;
   --picture_text_gap: 20px;
   --para_gap: 20px;
@@ -249,7 +249,6 @@ a {
     --choose_width: 250px;
     --zp_left_padding: 0;
     --zp_right_padding: 0;
-    --image_width: 160px;
   }
   a, li {
     display: block;
