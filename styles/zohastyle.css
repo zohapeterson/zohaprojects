@@ -1,10 +1,10 @@
 :root {
   --background_color: white;
   --text_color: black;
-  --selection_color: #fd3a2d;
+  --selection_color: #eb1c01;
   --title_fontsize: 100px;
   --secondary_fontsize: 17px;
-  --second_title_fontsize: 40px;
+  --second_title_fontsize: 30px;
   --header_padding: 20px;
   --borders: 4px solid var(--text_color);
   --top_margins: 150px;
@@ -21,7 +21,7 @@
   --zp_right_padding: 55px;
   --center_line_width: 2px;
   --stick_weight: 800;
-  --image_width: 160px;
+  --image_width: 200px;
   --choose_radius: 16px;
   --picture_text_gap: 20px;
   --para_gap: 20px;
@@ -38,7 +38,10 @@
 	margin: 0;
   color: var(--text_color);
   text-align: center;
-  font-weight: 100;
+  font-weight: lighter;
+  text-decoration: none !important;
+  text-decoration: none;
+
 }
 
 #stick_header {
@@ -54,6 +57,7 @@
   border-bottom: var(--borders);
   font-weight: var(--stick_weight);
   z-index: 1;
+  color: var(--selection_color);
 }
 
 .header {
@@ -66,6 +70,7 @@
 	border: var(--borders);
 	padding: var(--upper_padding);
   border-radius: var(--border_radius);
+  color: var(--selection_color);
 }
 
 .main_body {
@@ -94,22 +99,19 @@
   margin-bottom: var(--para_gap);
 }
 
-.text_1, .text_2, .text_3, .text_4, .text_5 {
+.text_2, .text_4, .text_5, .text_6 {
   font-size: var(--secondary_fontsize);
   text-align: left;
 }
 
 .text_1 {
-  font-weight: 800;
+  font-weight: 900;
   font-size: var(--second_title_fontsize);
+  text-align: left;
 }
 .text_2 {
-  font-weight: 700;
-  font-style: italic;
-}
-
-.text_3 {
   font-weight: 600;
+  font-style: italic;
 }
 
 .text_4 {
@@ -203,7 +205,6 @@ a {
   padding-top: var(--footer_padding);
   color: var(--background_color);
   background-color: var(--text_color);
-  font-weight: lighter;
   font-size: var(--secondary_fontsize);
 }
 
@@ -222,9 +223,9 @@ a {
 @media only screen and (max-width: 900px){
   :root {
     --choose_width: 150px;
-    --title_fontsize: 70px;
+    --title_fontsize: 80px;
     --secondary_fontsize: 15px;
-    --second_title_fontsize: 33px;
+    --second_title_fontsize: 25px;
   }
 
   .about_content_wrapper {
@@ -234,7 +235,7 @@ a {
     grid-template-columns: unset;
   }
 
-  .text_1, .text_2, .text_3, .text_6 {
+  .text_1, .text_2, .text_6 {
     text-align: center;
   }
 
@@ -249,10 +250,13 @@ a {
 
 @media only screen and (max-width: 695px){
   :root {
-    --title_fontsize: 60px;
+    --title_fontsize: 62px;
+    --secondary_fontsize: 14px;
+    --second_title_fontsize: 23px;
     --choose_width: 250px;
     --zp_left_padding: 0;
     --zp_right_padding: 0;
+    --image_width: 160px;
   }
   a, li {
     display: block;
@@ -275,9 +279,9 @@ a {
 
 @media only screen and (max-width: 555px){
   :root {
-    --title_fontsize: 40px;
-    --secondary_fontsize: 14px;
-    --second_title_fontsize: 25px;
+    --title_fontsize: 45px;
+    --secondary_fontsize: 13px;
+    --second_title_fontsize: 20px;
     --choose_width: 270px;
   }
 }
