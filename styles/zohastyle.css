@@ -14,7 +14,7 @@
   --line_height: 350px;
   --border_radius: 25px;
   --footer_padding: 30px;
-  --choose_width: 190px;
+  --choose_width: 155px;
   --choose_padding: 30px;
   --body_margins: 20px;
   --zp_left_padding: 27px;
@@ -154,21 +154,15 @@ img {
   filter: grayscale(100%);
 }
 
-.round_edges {
-  border-top-right-radius: var(--choose_radius);
-  border-bottom-right-radius: var(--choose_radius);
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
-#zp {
-  background-color: var(--text_color);
-  color: var(--background_color);
-  width: 0;
-  padding-left: var(--zp_left_padding);
-  padding-right: var(--zp_right_padding);
+.round_edges1 {
   border-top-left-radius: var(--choose_radius);
   border-bottom-left-radius: var(--choose_radius);
+}
+
+.round_edges2 {
+  border-top-right-radius: var(--choose_radius);
+  border-bottom-right-radius: var(--choose_radius);
+
 }
 
 a {
@@ -180,7 +174,7 @@ a {
   padding-bottom: var(--choose_padding);
 }
 
-#about:hover, #experience:hover, #projects:hover, #contact:hover {
+#about:hover, #experience:hover, #projects:hover, #contact:hover, #zp:hover {
   background-color: var(--text_color);
   transition: 0.125s;
   color: var(--background_color)
@@ -208,24 +202,18 @@ a {
   font-size: var(--secondary_fontsize);
 }
 
-@media only screen and (max-width: 1190px){
-  :root {
-    --choose_width: 250px;
-  }
-}
-
 @media only screen and (max-width: 1080px){
   :root {
-    --choose_width: 200px;
+    --choose_width: 121px;
   }
 }
 
 @media only screen and (max-width: 900px){
   :root {
-    --choose_width: 150px;
     --title_fontsize: 80px;
     --secondary_fontsize: 15px;
     --second_title_fontsize: 25px;
+    
   }
 
   .about_content_wrapper {
@@ -253,22 +241,22 @@ a {
     --title_fontsize: 62px;
     --secondary_fontsize: 14px;
     --second_title_fontsize: 23px;
-    --choose_width: 250px;
     --zp_left_padding: 0;
     --zp_right_padding: 0;
     --image_width: 160px;
+    --choose_width: 220px;
   }
   a, li {
     display: block;
-    width: var(--choose_width);
   }
-  #zp {
-    width: var(--choose_width);
+  .round_edges1 {
     border-top-right-radius: var(--choose_radius);
     border-top-left-radius: var(--choose_radius);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
-  .round_edges {
+  .round_edges2 {
     border-bottom-right-radius: var(--choose_radius);
     border-bottom-left-radius: var(--choose_radius);
     border-top-left-radius: 0px;
@@ -282,7 +270,7 @@ a {
     --title_fontsize: 45px;
     --secondary_fontsize: 13px;
     --second_title_fontsize: 20px;
-    --choose_width: 270px;
+    --choose_width: 200px;
   }
 }
 
