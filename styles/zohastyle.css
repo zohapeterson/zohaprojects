@@ -70,7 +70,6 @@
 	border: var(--borders);
 	padding: var(--upper_padding);
   border-radius: var(--border_radius);
-  color: var(--selection_color);
 }
 
 .main_body {
