@@ -57,7 +57,6 @@
   border-bottom: var(--borders);
   font-weight: var(--stick_weight);
   z-index: 1;
-  color: var(--selection_color);
 }
 
 .header {
