@@ -22,6 +22,7 @@
   --center_line_width: 2px;
   --stick_weight: 800;
   --image_width: 200px;
+  --gallery_image_width: 250px;
   --choose_radius: 16px;
   --picture_text_gap: 20px;
   --para_gap: 20px;
@@ -75,7 +76,7 @@
   margin: var(--body_margins);
 }
 
-.welcome, .contact_wrapper, .experience_wrapper, .about_block_wrapper, .project_wrapper, .see_experience, .see_projects {
+.welcome, .contact_wrapper, .experience_wrapper, .about_block_wrapper, .project_wrapper, .see_experience, .see_projects, .gallery_wrapper, .see_resume {
 	margin-left: auto;
 	margin-right: auto;
 	block-size: fit-content;
@@ -116,6 +117,11 @@
   text-align: justify;
 }
 
+.text_7 {
+  font-size: var(--secondary_fontsize);
+  text-align: middle;
+}
+
 .center_line {
 	height: var(--line_height);
 	width:0px;
@@ -150,6 +156,18 @@ img {
   height: auto;
   border: var(--borders);
   filter: grayscale(100%);
+}
+
+.gallery_img {
+  width: var(--gallery_image_width);
+  height: auto;
+}
+
+.gallery_wrapper {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
 }
 
 .round_edges1 {
@@ -242,6 +260,7 @@ a {
     --zp_left_padding: 0;
     --zp_right_padding: 0;
     --image_width: 160px;
+    --gallery_image_width: 160px;
     --choose_width: 220px;
   }
   a, li {
@@ -270,12 +289,19 @@ a {
     --second_title_fontsize: 20px;
     --choose_width: 200px;
   }
+  .gallery_wrapper {
+    display: block;
+  }
+  .design_work, .manufacturing_work, .stress_work {
+    margin-bottom: 15px;
+  }
 }
 
 @media only screen and (max-width: 310px){
   :root {
     --body_margins: 0;
     --image_width: 100px;
+    --gallery_image_width: 100px;
   }
   body {
     width: 310px;
