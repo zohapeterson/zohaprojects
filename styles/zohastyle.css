@@ -94,7 +94,7 @@
   
 }
 
-.textron_projects, .psp_projects, .asme_projects, .wm_projects, .data_science_projects, .scc_projects, .textron_experience, .psp_experience, .asme_experience, .wm_experience, .data_science_experience {
+.textron_projects, .psp_projects, .asme_projects, .wm_projects, .data_science_projects, .scc_projects, .textron_experience, .psp_experience, .asme_experience, .wm_experience, .data_science_experience, .shop_experience, .shop_projects {
   margin-bottom: var(--para_gap);
 }
 
