@@ -76,7 +76,7 @@
   margin: var(--body_margins);
 }
 
-.welcome, .contact_wrapper, .experience_wrapper, .about_block_wrapper, .project_wrapper, .see_experience, .see_projects, .gallery_wrapper, .see_resume {
+.welcome, .contact_wrapper, .experience_wrapper, .about_block_wrapper, .project_wrapper, .see_experience, .see_projects, .gallery_outside, .see_resume {
 	margin-left: auto;
 	margin-right: auto;
 	block-size: fit-content;
@@ -166,8 +166,9 @@ img {
 .gallery_wrapper {
   display: grid;
   gap: 15px;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
+  margin-top: 30px;
 }
 
 .round_edges1 {
@@ -221,6 +222,12 @@ a {
 @media only screen and (max-width: 1080px){
   :root {
     --choose_width: 121px;
+  }
+  .gallery_wrapper {
+    grid-template-columns: auto auto;
+  }
+  .project_image1 {
+    margin-bottom: 15px;
   }
 }
 
@@ -279,6 +286,9 @@ a {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
+  .gallery_wrapper {
+    display: block;
+  }
 
 }
 
@@ -288,12 +298,7 @@ a {
     --secondary_fontsize: 13px;
     --second_title_fontsize: 20px;
   }
-  .gallery_wrapper {
-    display: block;
-  }
-  .design_work, .manufacturing_work, .stress_work {
-    margin-bottom: 15px;
-  }
+
 }
 
 @media only screen and (max-width: 310px){
