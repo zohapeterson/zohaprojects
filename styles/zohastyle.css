@@ -22,7 +22,7 @@
   --center_line_width: 2px;
   --stick_weight: 800;
   --image_width: 225px;
-  --gallery_image_width: 275px;
+  --gallery_image_width: 375px;
   --choose_radius: 16px;
   --picture_text_gap: 20px;
   --para_gap: 20px;
@@ -222,13 +222,12 @@ a {
 @media only screen and (max-width: 1080px){
   :root {
     --choose_width: 121px;
+    --gallery_image_width: 250px;
   }
   .gallery_wrapper {
     grid-template-columns: auto auto;
   }
-  .project_image1 {
-    margin-bottom: 15px;
-  }
+
 }
 
 @media only screen and (max-width: 900px){
@@ -288,6 +287,9 @@ a {
   }
   .gallery_wrapper {
     display: block;
+  }
+  .project_image1 {
+    margin-bottom: 15px;
   }
 
 }
