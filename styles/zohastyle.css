@@ -254,8 +254,8 @@ a {
   :root {
     --title_fontsize: 80px;
     --secondary_fontsize: 15px;
-    --second_title_fontsize: 25px;
-    
+    --second_title_fontsize: 35px;
+    --tertiary_title_fontsize: 18px;
   }
 
   .about_content_wrapper {
@@ -282,7 +282,8 @@ a {
   :root {
     --title_fontsize: 62px;
     --secondary_fontsize: 14px;
-    --second_title_fontsize: 23px;
+    --second_title_fontsize: 29px;
+    --tertiary_title_fontsize: 16px;
     --zp_left_padding: 0;
     --zp_right_padding: 0;
     --image_width: 200px;
@@ -317,8 +318,9 @@ a {
   :root {
     --title_fontsize: 45px;
     --secondary_fontsize: 13px;
-    --second_title_fontsize: 20px;
+    --second_title_fontsize: 23px;
     --gallery_image_width: 225px;
+    --tertiary_title_fontsize: 14px;
   }
 
 }
