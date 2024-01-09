@@ -27,7 +27,7 @@
   --gallery_image_width: 300px;
   --choose_radius: 16px;
   --picture_text_gap: 20px;
-  --para_gap: 20px;
+  --para_gap: 10px;
 }
 
 ::selection {
@@ -96,7 +96,7 @@
   
 }
 
-.asme_projects, .scc_projects{
+.asme_projects, .psp_projects, .shop_projects{
   margin-bottom: var(--para_gap);
 }
 
